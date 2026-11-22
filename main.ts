@@ -3,7 +3,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const IMAGE_NAME = 'entry.png';
-const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+const DEFAULT_OUTPUT_DIR = '/output';
+const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? DEFAULT_OUTPUT_DIR;
 const OUTPUT_FILE = join(OUTPUT_DIR, IMAGE_NAME);
 const SOURCE_FILE = join(dirname(fileURLToPath(import.meta.url)), IMAGE_NAME);
 
